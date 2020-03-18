@@ -1,5 +1,10 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/utilities';
 @import 'tailwindcss/components';
-// @import './custom-tailwind/custom-components.scss'; // added
-// @import './custom-tailwind/custom-utilities.scss'; // added
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: Helvetica, 'Roboto';
+}
