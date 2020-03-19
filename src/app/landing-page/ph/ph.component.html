@@ -1,5 +1,5 @@
-<div class="px-12 py-3 bg-white">
-  <div class="nav">
+<div class=" bg-white">
+  <div class="nav p-2">
     <ul class="flex justify-center items-center text-2xs text-gray-600">
       <li class="mx-5">Services</li>
       <li class="mx-5">Features</li>
@@ -13,13 +13,6 @@
     </ul>
   </div>
   <section class="main-container py-4 flex flex-col justify-end">
-    <div class="title-text z-1 text-white leading-none">
-      <h1 class="text-4xl mb-2">The Future of</h1>
-      <h1 class="text-5xl font-extrabold mb-2">
-        LOGISTICS
-      </h1>
-      <p class="text-2xl">Changing how we do logistics</p>
-    </div>
     <!-- <div class="px-48 z-1 mb-5">
       <ul class="flex justify-between py-4 px-4 bg-blue-600">
         <li
@@ -67,27 +60,138 @@
       <li
         class="w-40 border-r border-gray-700 flex items-center justify-center cursor"
       >
-        <img src="assets/svg/Image 153.svg" alt="" class="w-8" />
+        <img src="assets/svg/ship.svg" alt="" class="w-8" />
         Shipping
       </li>
       <li
         class="w-40 border-r border-gray-700 flex items-center justify-center cursor"
       >
-        <img src="assets/svg/Image 154.svg" alt="" class="w-8" />
+        <img src="assets/svg/truck.svg" alt="" class="w-8" />
         Trucking
       </li>
       <li
         class="w-40 border-r border-gray-700 flex items-center justify-center cursor"
       >
-        <img src="assets/svg/Image 155.svg" alt="" class="w-6 mr-1" />
+        <img src="assets/svg/list.svg" alt="" class="w-6 mr-1" />
         Custom Borkder
       </li>
       <li
         class="w-40 border-r border-gray-700 flex items-center justify-center cursor"
       >
-        <img src="assets/svg/Image 156.svg" alt="" class="w-6 mr-1" />
+        <img src="assets/svg/warehouse.svg" alt="" class="w-6 mr-1" />
         Warehousing
       </li>
     </ul>
+  </section>
+  <section class="services">
+    <div class=" h-12 border-b border-blue-300"></div>
+    <div class="flex justify-center items-center -mt-5">
+      <h1 class="text-2xl text-blue-500 bg-white px-5">Services</h1>
+    </div>
+    <div class="carousel flex justify-center items-center pt-4 pb-12 px-32">
+      <div
+        class=" card rounded-sm flex flex-col relative items-center py-8 px-16"
+      >
+        <img src="assets/images/Group 121.png" alt="" class="card-bg" />
+        <div class="my-2 text-xs text-blue-800 z-1">
+          <img src="assets/svg/Group 127.svg" alt="" class="w-16" />
+        </div>
+        <div class="my-2 text-xs text-blue-800 font-extrabold z-1">
+          Custom Broker
+        </div>
+        <div class="my-2 text-xs text-blue-700 text-justify z-1">
+          Lorem ipsum dolor sit amet consectetur elit. Vitae nulla fugiat
+          id.Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, illo!
+        </div>
+      </div>
+      <div
+        class=" card-active rounded-sm flex flex-col relative items-center py-8 px-16"
+      >
+        <button class="prev-btn z-1 w-8">
+          <img src="assets/svg/arrow-left.svg" alt="" />
+        </button>
+        <img src="assets/images/center-img.png" alt="" class="card-bg" />
+        <div class="my-2 text-xs text-white z-1">
+          <img src="assets/svg/Group 125.svg" alt="" class="w-16" />
+        </div>
+        <div class="my-2 text-lg text-white font-extrabold z-1">
+          Shipping / Ocean Freight
+        </div>
+        <div class="my-2 text-xs text-white text-justify z-1">
+          Lorem ipsum dolor sit amet consectetur elit. Vitae nulla fugiat
+          id.Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, illo!
+        </div>
+        <button class="next-btn z-1 w-8">
+          <img src="assets/svg/arrow-right.svg" alt="" />
+        </button>
+        <button class="req-btn ">
+          <img src="assets/svg/Image 132.svg" alt="" class="w-5 mr-2" /> Request
+          for demo
+        </button>
+      </div>
+      <div
+        class=" card rounded-sm flex flex-col relative items-center py-8 px-16"
+      >
+        <img src="assets/images/Group 124.png" alt="" class="card-bg" />
+        <div class="my-2 text-xs text-blue-800 z-1">
+          <img src="assets/svg/Group 126.svg" alt="" class="w-16" />
+        </div>
+        <div class="my-2 text-xs text-blue-800 font-extrabold z-1">
+          Trucking
+        </div>
+        <div class="my-2 text-xs text-blue-700 text-justify z-1">
+          Lorem ipsum dolor sit amet consectetur elit. Vitae nulla fugiat
+          id.Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, illo!
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="since">
+    <div class=" h-8 border-b border-blue-300"></div>
+    <div class="flex justify-center items-center -mt-5">
+      <h1 class="text-2xl text-white px-5">Since our launch in 2018</h1>
+    </div>
+    <ul class="flex justify-evenly flex-wrap py-8 px-32 text-white">
+      <li
+        *ngFor="let data of datas"
+        class="flex flex-col justify-center items-center flex-wrap mb-5"
+      >
+        <div class="h-12 flex justify-center items-center">
+          <img [src]="data.icon" alt="" class="w-10" />
+        </div>
+        <h1 class="text-3xl">{{ data.count | number }}</h1>
+        <pre class="text-sm font-hairline text-center">{{ data.title }}</pre>
+      </li>
+    </ul>
+  </section>
+  <section class="features">
+    <div class=" h-12 border-b border-blue-300"></div>
+    <div class="flex justify-center items-center -mt-5">
+      <h1 class="text-2xl text-blue-500 px-5">Features</h1>
+    </div>
+    <ul
+      class="flex justify-between flex-wrap pt-8 pb-20 sm:px-12 px-4 md:px-20 lg:px-56 text-gray-700"
+    >
+      <li
+        *ngFor="let data of features"
+        class="flex flex-col justify-center items-center flex-wrap mb-5"
+      >
+        <img [src]="data.icon" alt="" class="w-16 my-6 mx-auto" />
+        <div class="text-sm mb-2">{{ data.title }}</div>
+        <div class="text-2xs font-hairline leading-loose">
+          {{ data.description }}
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="mobile-ad py-12 mb-20">
+    <div class="sm:px-12 px-4 md:px-20 lg:px-56">
+      <h1 class="text-4xl text-white">
+        Bring us with you
+      </h1>
+      <p class="text-white font-thin text-sm">
+        Now Available on Android and IOS
+      </p>
+    </div>
   </section>
 </div>

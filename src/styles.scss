@@ -8,3 +8,11 @@
   list-style: none;
   font-family: Helvetica, 'Roboto';
 }
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus,
+div:focus {
+  outline: none;
+}
